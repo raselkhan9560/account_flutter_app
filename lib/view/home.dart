@@ -1,3 +1,4 @@
+import 'package:account_flutter_app/view/activity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 
@@ -165,94 +166,101 @@ class _HomePageState extends State<HomePage> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  Container(
-                    height: 180,
-                    width: 150,
-                    margin: EdgeInsets.only(left: 30),
-                    decoration: BoxDecoration(),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          right: 0,
-                          top: 0,
-                          bottom: 20,
-                          child: Image.asset('assets/balance_bg.png'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15, left: 25, right: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Balance',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              Icon(
-                                Icons.more_vert,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 30,
-                          left: 20,
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/VISA.png',
-                              ),
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: Colors.white54,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 35,
-                          right: 15,
-                          child: Text(
-                            'Dec, 02th',
-                            style:
-                                TextStyle(color: Colors.white54, fontSize: 10),
-                          ),
-                        ),
-                        Positioned(
-                            top: 50,
-                            left: 20,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (__) => ActivityPage()));
+                    },
+                    child: Container(
+                      height: 180,
+                      width: 150,
+                      margin: EdgeInsets.only(left: 30),
+                      decoration: BoxDecoration(),
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
                             right: 0,
-                            child: RichText(
-                              text: TextSpan(
-                                text: '+859',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' ৳',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w100),
+                            top: 0,
+                            bottom: 20,
+                            child: Image.asset('assets/balance_bg.png'),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(top: 15, left: 25, right: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Balance',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
                                   ),
-                                ],
-                              ),
-                            )),
-                        Positioned(
-                            bottom: 0,
-                            right: 10,
-                            child: Icon(
-                              Icons.arrow_drop_down,
-                              size: 30,
-                              color: Colors.blue[800],
-                            ))
-                      ],
+                                ),
+                                Icon(
+                                  Icons.more_vert,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 30,
+                            left: 20,
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/VISA.png',
+                                ),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 35,
+                            right: 15,
+                            child: Text(
+                              'Dec, 02th',
+                              style: TextStyle(
+                                  color: Colors.white54, fontSize: 10),
+                            ),
+                          ),
+                          Positioned(
+                              top: 50,
+                              left: 20,
+                              right: 0,
+                              child: RichText(
+                                text: TextSpan(
+                                  text: '+859',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: ' ৳',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w100),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                          Positioned(
+                              bottom: 0,
+                              right: 10,
+                              child: Icon(
+                                Icons.arrow_drop_down,
+                                size: 30,
+                                color: Colors.blue[800],
+                              ))
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -320,7 +328,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Positioned(
-                          bottom: 60,
+                          bottom: 50,
                           left: 10,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -348,7 +356,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Positioned(
-                          bottom: 45,
+                          bottom: 35,
                           left: 10,
                           right: 20,
                           child: FAProgressBar(
@@ -426,7 +434,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Positioned(
-                          bottom: 60,
+                          bottom: 50,
                           left: 10,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -454,7 +462,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Positioned(
-                          bottom: 45,
+                          bottom: 35,
                           left: 10,
                           right: 20,
                           child: FAProgressBar(
@@ -541,17 +549,16 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/internet.png',
-                              height: 40,
-                              width: 40,
+                            Icon(
+                              Icons.food_bank_outlined,
+                              size: 40,
                             ),
                             SizedBox(
                               width: 20,
                             ),
                             RichText(
                               text: TextSpan(
-                                text: 'Internet\n',
+                                text: 'Food\n',
                                 style: TextStyle(
                                   color: Color(0xff3c4555),
                                   fontSize: 16,
@@ -589,17 +596,17 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/drive.png',
-                              height: 40,
-                              width: 40,
+                            Icon(
+                              Icons.car_repair,
+                              size: 40,
+                              color: Color(0xFFDA8422),
                             ),
                             SizedBox(
                               width: 20,
                             ),
                             RichText(
                               text: TextSpan(
-                                text: 'Internet\n',
+                                text: 'Car repair\n',
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 16,
@@ -609,7 +616,7 @@ class _HomePageState extends State<HomePage> {
                                   TextSpan(
                                     text: '#512684',
                                     style: TextStyle(
-                                      color: Color(0xFF447BDB),
+                                      color: Color(0xFFDA8422),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -622,7 +629,7 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           '-956 ৳',
                           style: TextStyle(
-                              color: Color(0xFF447BDB),
+                              color: Color(0xFFDA8422),
                               fontWeight: FontWeight.bold,
                               fontSize: 25),
                         )
@@ -643,11 +650,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/internet.png',
-                              height: 40,
-                              width: 40,
-                            ),
+                            Icon(Icons.shop, size: 40, color: Colors.black),
                             SizedBox(
                               width: 20,
                             ),
